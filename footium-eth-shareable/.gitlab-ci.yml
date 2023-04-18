@@ -1,0 +1,68 @@
+build_footium-eth:
+    stage: build
+    needs: ["build_footium-engine"]
+    variables:
+        DIR: packages/footium-eth
+    extends: .run-on-change
+    script:
+        - CI=false npm run build
+    artifacts:
+        paths:
+            - packages/footium-eth/artifacts
+            - packages/footium-eth/node_modules
+
+test_footium-eth:
+    stage: test
+    needs: ["build_footium-eth"]
+    variables:
+        DIR: packages/footium-eth
+    extends: .run-on-change
+    script:
+        - npm test
+
+lint_footium-eth:
+    stage: test
+    needs: ["build_footium-eth"]
+    variables:
+        DIR: packages/footium-eth
+    extends: .run-on-change
+    script:
+        - npm run lint
+
+test-deploy_footium-eth:
+    stage: test
+    needs: ["build_footium-eth", "build_footium-engine"]
+    variables:
+        DIR: packages/footium-eth
+    extends: .run-on-change
+    script:
+        - npm run soft-deploy
+
+rinkeby-deploy_footium-eth:
+    stage: deploy
+    needs: ["build_footium-eth", "build_footium-engine"]
+    variables:
+        DIR: packages/footium-eth
+    extends: .default-branch-job
+    script:
+        - ../scripts/fetch-live-config.sh beta-20220127
+        - npm run rinkeby:deploy
+        - sleep 60
+        - npm run rinkeby:mint-clubs
+        - sleep 60
+        - npm run rinkeby:mint-tokens
+    artifacts:
+        paths:
+            - packages/footium-eth/artifacts
+    rules:
+        - if: "$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH"
+          when: manual
+
+artifacts_footium-eth:
+    stage: deploy
+    needs: ["rinkeby-deploy_footium-eth"]
+    extends: .ssh-job
+    only:
+        - master
+    script:
+        - scp -r footium-eth/artifacts simiumdev@footium.club:/home/simiumdev/Artifacts
