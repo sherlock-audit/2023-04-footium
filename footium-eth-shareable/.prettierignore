@@ -1,0 +1,16 @@
+.deps
+.husky
+README.md
+build/
+flattened/
+node_modules/
+.env*
+crytic-export
+mcore_*
+manticore_output
+artifacts
+cache
+*.DS_Store
+*.yml
+*.py
+*.txt
