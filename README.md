@@ -68,3 +68,20 @@ ___
 
 
 # Audit scope
+
+
+[footium-eth-shareable @ 6c181ea79af7f6715e3891e65ea5ee8def1e957c](https://github.com/logiclogue/footium-eth-shareable/tree/6c181ea79af7f6715e3891e65ea5ee8def1e957c)
+- [footium-eth-shareable/contracts/FootiumAcademy.sol](footium-eth-shareable/contracts/FootiumAcademy.sol)
+- [footium-eth-shareable/contracts/FootiumClub.sol](footium-eth-shareable/contracts/FootiumClub.sol)
+- [footium-eth-shareable/contracts/FootiumClubMinter.sol](footium-eth-shareable/contracts/FootiumClubMinter.sol)
+- [footium-eth-shareable/contracts/FootiumEscrow.sol](footium-eth-shareable/contracts/FootiumEscrow.sol)
+- [footium-eth-shareable/contracts/FootiumGeneralPaymentContract.sol](footium-eth-shareable/contracts/FootiumGeneralPaymentContract.sol)
+- [footium-eth-shareable/contracts/FootiumPlayer.sol](footium-eth-shareable/contracts/FootiumPlayer.sol)
+- [footium-eth-shareable/contracts/FootiumPrizeDistributor.sol](footium-eth-shareable/contracts/FootiumPrizeDistributor.sol)
+- [footium-eth-shareable/contracts/FootiumToken.sol](footium-eth-shareable/contracts/FootiumToken.sol)
+- [footium-eth-shareable/contracts/common/Errors.sol](footium-eth-shareable/contracts/common/Errors.sol)
+- [footium-eth-shareable/contracts/interfaces/IFootiumClub.sol](footium-eth-shareable/contracts/interfaces/IFootiumClub.sol)
+- [footium-eth-shareable/contracts/interfaces/IFootiumPlayer.sol](footium-eth-shareable/contracts/interfaces/IFootiumPlayer.sol)
+- [footium-eth-shareable/contracts/mocks/FootiumPlayerMockV2.sol](footium-eth-shareable/contracts/mocks/FootiumPlayerMockV2.sol)
+
+
