@@ -82,6 +82,5 @@ ___
 - [footium-eth-shareable/contracts/common/Errors.sol](footium-eth-shareable/contracts/common/Errors.sol)
 - [footium-eth-shareable/contracts/interfaces/IFootiumClub.sol](footium-eth-shareable/contracts/interfaces/IFootiumClub.sol)
 - [footium-eth-shareable/contracts/interfaces/IFootiumPlayer.sol](footium-eth-shareable/contracts/interfaces/IFootiumPlayer.sol)
-- [footium-eth-shareable/contracts/mocks/FootiumPlayerMockV2.sol](footium-eth-shareable/contracts/mocks/FootiumPlayerMockV2.sol)
 
 
